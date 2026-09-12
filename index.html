@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#160812">
+<meta name="description" content="A little birthday surprise for Gulfii ❤️">
+<title>For Gulfii ❤️</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{min-height:100vh;background:#160812;color:#fff;font-family:Georgia,"Times New Roman",serif;overflow-x:hidden}
+button{font:inherit}.hidden{display:none!important}
+.background{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:radial-gradient(circle at 15% 20%,rgba(255,74,137,.18),transparent 30%),radial-gradient(circle at 85% 80%,rgba(180,65,255,.15),transparent 30%),#160812}
+.glow{position:absolute;width:350px;height:350px;border-radius:50%;filter:blur(100px);opacity:.22}.glow.one{background:#ff3f82;top:-150px;left:-120px}.glow.two{background:#8b4dff;bottom:-150px;right:-120px}
+.stars{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.8) 1px,transparent 1px),radial-gradient(circle,rgba(255,255,255,.5) 1px,transparent 1px);background-size:90px 90px,140px 140px;background-position:10px 20px,40px 70px;opacity:.18}
+.floating-hearts{position:fixed;inset:0;z-index:2;pointer-events:none;overflow:hidden}.floating-heart{position:absolute;bottom:-50px;font-size:20px;animation:floatHeart linear infinite;opacity:0}.floating-heart:nth-child(1){left:5%;animation-duration:9s}.floating-heart:nth-child(2){left:17%;animation-duration:11s;animation-delay:3s}.floating-heart:nth-child(3){left:30%;animation-duration:8s;animation-delay:1s}.floating-heart:nth-child(4){left:45%;animation-duration:12s;animation-delay:5s}.floating-heart:nth-child(5){left:60%;animation-duration:9s;animation-delay:2s}.floating-heart:nth-child(6){left:75%;animation-duration:11s;animation-delay:4s}.floating-heart:nth-child(7){left:90%;animation-duration:8s;animation-delay:6s}
+@keyframes floatHeart{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.7}100%{transform:translateY(-115vh) rotate(360deg);opacity:0}}
+.screen{position:relative;z-index:3;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:30px 18px}.content{width:min(850px,100%);text-align:center}
+.small-text{color:rgba(255,255,255,.6);font-family:Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;font-size:11px}
+.primary-btn{border:1px solid rgba(255,255,255,.18);padding:15px 28px;border-radius:50px;background:linear-gradient(135deg,#ff4d8d,#b52d68);color:#fff;cursor:pointer;font-size:15px;box-shadow:0 12px 35px rgba(255,60,125,.25);transition:.3s ease;-webkit-tap-highlight-color:transparent}.primary-btn:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 18px 45px rgba(255,60,125,.35)}.primary-btn:active{transform:scale(.97)}
+.intro-heart,.final-heart{font-size:65px;margin-bottom:20px;animation:heartbeat 1.5s infinite}.intro h1{font-size:clamp(3.5rem,13vw,8rem);font-weight:normal;color:#ff8eb6;text-shadow:0 0 20px rgba(255,100,160,.3),0 0 70px rgba(255,70,140,.2)}.intro-subtitle{margin-top:15px;color:rgba(255,255,255,.72);font-family:Arial,sans-serif;font-size:16px}.intro-btn{margin-top:45px}
+.envelope-wrapper{position:relative;width:min(360px,88vw);height:240px;margin:45px auto;cursor:pointer;perspective:900px}.envelope{position:absolute;inset:0;background:#9d315b;border-radius:5px;box-shadow:0 30px 70px rgba(0,0,0,.5);overflow:visible}.envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,transparent 49%,rgba(255,255,255,.12) 50%,transparent 51%)}
+.flap{position:absolute;top:0;left:0;width:0;height:0;border-left:180px solid transparent;border-right:180px solid transparent;border-top:125px solid #c84473;transform-origin:top center;transition:transform 1s ease;z-index:5}.letter-paper{position:absolute;width:88%;height:82%;left:6%;top:7%;background:#fff7fa;color:#64263f;border-radius:4px;transition:transform 1.2s ease;z-index:2;display:flex;align-items:center;justify-content:center;font-size:25px}.seal{position:absolute;z-index:6;left:50%;top:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:#f05c91;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 25px rgba(0,0,0,.3);transition:opacity .5s}.envelope-wrapper.open .flap{transform:rotateX(180deg)}.envelope-wrapper.open .letter-paper{transform:translateY(-130px)}.envelope-wrapper.open .seal{opacity:0}.tap-text{color:rgba(255,255,255,.55);font-family:Arial,sans-serif;font-size:13px;margin-top:25px}
+#nameScreen h1{font-size:clamp(3rem,11vw,7rem);color:#ff8eb6;font-weight:normal;min-height:1.2em}.cursor{display:inline-block;width:2px;height:.9em;background:#ff8eb6;margin-left:4px;animation:blink .7s infinite}.name-message{margin-top:25px;font-family:Arial,sans-serif;color:rgba(255,255,255,.72);line-height:1.7}
+.gallery-section{padding:80px 18px 20px}.section-title{font-size:clamp(2rem,7vw,3.5rem);font-weight:normal;color:#ff9cbd;margin-bottom:12px}.section-subtitle{color:rgba(255,255,255,.6);font-family:Arial,sans-serif;margin-bottom:35px}.gallery{width:min(850px,100%);margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.photo{aspect-ratio:1/1.15;border-radius:16px;overflow:hidden;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);box-shadow:0 15px 40px rgba(0,0,0,.25)}.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}.photo:hover img{transform:scale(1.06)}.photo-fallback{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45);font-family:Arial,sans-serif;font-size:13px;padding:20px}
+.music-player{margin:35px auto;padding:18px;width:min(500px,100%);border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}.music-label{margin-bottom:12px;color:#ff9cbd;font-family:Arial,sans-serif;font-size:13px}.music-player audio{width:100%}
+.letter-section{padding:80px 18px}.paper{width:min(850px,100%);margin:auto;text-align:left;background:#fff9fb;color:#54263a;border-radius:22px;padding:clamp(28px,7vw,65px);box-shadow:0 30px 90px rgba(0,0,0,.4);position:relative}.paper:after{content:"♡";position:absolute;top:25px;right:30px;font-size:35px;color:#e6a0ba}.date{text-align:right;color:#9b7183;font-family:Arial,sans-serif;font-size:12px;margin-bottom:35px}.greeting{font-size:clamp(2rem,6vw,3rem);color:#a83261;font-weight:normal;margin-bottom:30px}.paper p{font-family:Arial,sans-serif;font-size:16px;line-height:1.95;margin-bottom:23px}.birthday-box{text-align:center;background:linear-gradient(135deg,#ffe0eb,#f2e1ff);border-radius:18px;padding:28px 18px;margin:35px 0;color:#a83261;font-family:Arial,sans-serif;line-height:1.8;font-weight:bold}.quote{text-align:center;border-left:3px solid #d94f83;border-right:3px solid #d94f83;padding:20px;margin:35px 0;color:#a83261;font-style:italic;font-size:18px;line-height:1.7}.icecream{text-align:center!important;font-size:24px!important}.jealous{background:#fff0f5;border:1px dashed #e0a0b7;padding:20px;border-radius:15px}.last-line{text-align:center;color:#a83261;font-size:23px!important;font-weight:bold;margin-top:40px}.signature{text-align:right;margin-top:45px;font-family:Arial,sans-serif;color:#805066}.signature-name{display:block;margin-top:8px;color:#a83261;font-family:Georgia,serif;font-size:28px}
+.surprise-section{min-height:75vh;padding:80px 18px;display:flex;align-items:center;justify-content:center;text-align:center}.gift{font-size:80px;cursor:pointer;animation:giftFloat 2s ease-in-out infinite;-webkit-tap-highlight-color:transparent}.surprise-text{margin-top:25px;font-family:Arial,sans-serif;color:rgba(255,255,255,.65)}.secret{display:none;margin-top:35px;animation:reveal .8s ease}.secret.show{display:block}.secret h2{font-size:clamp(2.5rem,9vw,5rem);color:#ff8eb6;font-weight:normal;line-height:1.15}.secret p{margin-top:20px;color:rgba(255,255,255,.7);font-family:Arial,sans-serif}
+.final-screen{min-height:100vh;padding:30px 18px;display:flex;align-items:center;justify-content:center;text-align:center}.final-heart{font-size:80px}.final-screen h1{margin-top:25px;font-size:clamp(2.5rem,9vw,6rem);color:#ff8eb6;font-weight:normal}.final-screen p{margin-top:20px;color:rgba(255,255,255,.65);font-family:Arial,sans-serif}.from{margin-top:35px!important;color:#ff9cbd!important;font-size:18px}
+@keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}@keyframes blink{50%{opacity:0}}@keyframes reveal{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}@keyframes giftFloat{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-12px) rotate(3deg)}}
+@media(max-width:650px){.gallery{grid-template-columns:repeat(2,1fr)}.gallery .photo:last-child{grid-column:span 2;max-width:50%;margin:auto}.flap{border-left-width:44vw;border-right-width:44vw;border-top-width:110px}.envelope-wrapper{height:210px}.paper p{font-size:15px}.primary-btn{padding:14px 22px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="background"><div class="stars"></div><div class="glow one"></div><div class="glow two"></div></div>
+<div class="floating-hearts" aria-hidden="true"><span class="floating-heart">❤️</span><span class="floating-heart">💕</span><span class="floating-heart">♡</span><span class="floating-heart">💗</span><span class="floating-heart">♥️</span><span class="floating-heart">💕</span><span class="floating-heart">❤️</span></div>
+
+<section class="screen" id="intro"><div class="content"><div class="intro-heart">❤️</div><div class="small-text">A little surprise for</div><h1>Gulfii</h1><p class="intro-subtitle">From someone who loves you more than he can explain...</p><button class="primary-btn intro-btn" id="startBtn">Open Your Birthday Surprise 💌</button></div></section>
+
+<section class="screen hidden" id="envelopeScreen"><div class="content"><div class="small-text">You have a letter...</div><div class="envelope-wrapper" id="envelope" role="button" tabindex="0" aria-label="Open birthday letter"><div class="envelope"><div class="letter-paper">❤️</div><div class="flap"></div><div class="seal">❤️</div></div></div><p class="tap-text">Tap the envelope to open it</p></div></section>
+
+<section class="screen hidden" id="nameScreen"><div class="content"><div class="small-text">This is for you...</div><h1><span id="typedName"></span><span class="cursor"></span></h1><p class="name-message">Happy Birthday to the most special girl in my life. ❤️</p><button class="primary-btn" id="continueBtn" style="margin-top:35px">Continue ❤️</button></div></section>
+
+<main class="hidden" id="mainContent">
+<section class="gallery-section"><div class="content"><div class="small-text">Our little memories</div><h2 class="section-title">Moments With You ❤️</h2><p class="section-subtitle">A few little moments that deserve to stay forever.</p><div class="gallery">
+<div class="photo"><img src="C:\Users\saurav\Downloads\IMG-20260805-WA0014.jpg" onerror="this.outerHTML='<div class=\"photo-fallback\">Add photo1.jpg here ❤️</div>'"></div>
+<div class="photo"><img src="C:\Users\saurav\Downloads\IMG-20260805-WA0014.jpg" onerror="this.outerHTML='<div class=\"photo-fallback\">Add photo2.jpg here ❤️</div>'"></div>
+<div class="photo"><img src="C:\Users\saurav\Downloads\IMG-20260805-WA0014.jpg" onerror="this.outerHTML='<div class=\"photo-fallback\">Add photo3.jpg here ❤️</div>'"></div>
+</div><div class="music-player"><div class="music-label">🎵 Our song</div><audio controls preload="metadata"><source src="assets/music.mp3" type="audio/mpeg">Your browser does not support audio.</audio></div></div></section>
+
+<section class="letter-section"><div class="content"><div class="paper">
+    <div class="date">12 September ❤️</div>
+    <h2 class="greeting">Hellooo Gulfii,</h2>
+
+    <p>Sorry if kuch galti ho its first time ki kuch letter vagera likhra hu,</p>
+
+    <p>Vese to yrr likhnaa aata nhi jyada but ek cheez likhni h vo h thank you...</p>
+
+    <p>First of all <b>Happy birthday to my little sweet girlfriend, my masti partner, riding partner, and best chapter of my life. Love youuu ❤️</b></p>
+
+    <p>Because Tumhare sath rehkar thoda Free feel krta hu, aur khush rehta hu, maza aata h, and sabse badi baat loved feel krta hu, lgta h koi care krta h, and to be honest this is best feel I ever had.</p>
+
+    <p>Aur yr tum real m best ho, I feel emotions with you, You inspire me to be a better person. Just for you...</p>
+
+    <p>And every moment we spent till now is best for me and very precious to me.</p>
+
+    <p>And I am very happy excited to spend more moment with you.</p>
+
+    <p>And haa vo icecream wala aur hmm wala yaad ho to maza aata h 😂😂</p>
+
+    <p>Aur real m jyada nhi likh para but this is just tip of iceberg aur haa m bhot jyada possesive hu tumhe lekar if koi ladka tumhare contact m bhi h to m jealous hota huuu useee but kuch kar nhi skta.</p>
+
+    <div class="quote">And last but not least ❤️</div>
+
+    <p class="last-line">I love you moreeee❤️</p>
+  </div></div></section>
+
+<section class="surprise-section"><div class="content"><div class="small-text">One last thing...</div><div class="gift" id="gift" role="button" tabindex="0" aria-label="Open final surprise">🎁</div><p class="surprise-text">Tap the gift for one last surprise ✨</p><div class="secret" id="secret"><h2>You're<br>pretty special. ❤️</h2><p>And yes, I made an entire website just to prove it. 😂</p><button class="primary-btn" id="finalBtn" style="margin-top:30px">One Last Page ❤️</button></div></div></section>
+</main>
+
+<section class="final-screen hidden" id="finalScreen"><div><div class="final-heart">❤️</div><h1>Happy Birthday, Gulfii!</h1><p>May your smile always be bigger than your worries.</p><p class="from">Made with ❤️ by Saurav</p></div></section>
+
+<script>
+(function(){
+ const $=id=>document.getElementById(id);
+ const goTop=()=>window.scrollTo({top:0,behavior:'smooth'});
+ function show(id){['intro','envelopeScreen','nameScreen','finalScreen'].forEach(x=>$(x).classList.add('hidden'));$(id).classList.remove('hidden');goTop();}
+ $('startBtn').addEventListener('click',()=>show('envelopeScreen'));
+ function openEnvelope(){const e=$('envelope');if(e.classList.contains('open'))return;e.classList.add('open');setTimeout(()=>{show('nameScreen');typeName()},1200)}
+ $('envelope').addEventListener('click',openEnvelope);
+ $('envelope').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openEnvelope()}});
+ let timer;
+ function typeName(){clearInterval(timer);const el=$('typedName'),name='Gulfii';el.textContent='';let i=0;timer=setInterval(()=>{el.textContent+=name[i++];if(i>=name.length)clearInterval(timer)},180)}
+ $('continueBtn').addEventListener('click',()=>{$('nameScreen').classList.add('hidden');$('mainContent').classList.remove('hidden');goTop()});
+ function gift(){ $('secret').classList.add('show');$('gift').style.animation='none';$('gift').textContent='💝'; }
+ $('gift').addEventListener('click',gift);$('gift').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();gift()}});
+ $('finalBtn').addEventListener('click',()=>{$('mainContent').classList.add('hidden');show('finalScreen')});
+})();
+</script>
+</body>
+</html>
