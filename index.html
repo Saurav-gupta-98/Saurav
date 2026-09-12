@@ -1,0 +1,690 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<index>saurav-gupta-98.github.io/Birthday-Wish/</index>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Gulfi❤️</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  min-height:100vh;
+  overflow:hidden;
+  font-family:Arial,sans-serif;
+  color:white;
+  text-align:center;
+  background:
+    radial-gradient(circle at 50% 20%,#7a164f 0%,#260020 45%,#080008 100%);
+}
+
+/* Stars */
+.star{
+  position:fixed;
+  width:3px;
+  height:3px;
+  background:white;
+  border-radius:50%;
+  animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+  from{opacity:.2;transform:scale(.5)}
+  to{opacity:1;transform:scale(1.5)}
+}
+
+/* Main card */
+.card{
+  position:relative;
+  z-index:10;
+  width:92%;
+  max-width:650px;
+  margin:4vh auto;
+  padding:30px 20px;
+  border-radius:30px;
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.25);
+  backdrop-filter:blur(15px);
+  box-shadow:0 20px 70px rgba(0,0,0,.6);
+}
+
+/* Photo */
+.photo-wrap{
+  width:155px;
+  height:155px;
+  margin:auto;
+  padding:5px;
+  border-radius:50%;
+  background:linear-gradient(45deg,#ff1493,#ffd700,#ff69b4,#fff);
+  animation:glow 2s infinite alternate;
+}
+
+#photo{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:50%;
+  border:4px solid #260020;
+}
+
+@keyframes glow{
+  from{box-shadow:0 0 15px #ff1493}
+  to{box-shadow:0 0 45px #ff69b4}
+}
+
+/* Upload */
+input{
+  display:none;
+}
+
+.choose{
+  display:inline-block;
+  margin-top:15px;
+  padding:9px 18px;
+  border-radius:20px;
+  background:rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.3);
+  cursor:pointer;
+  font-size:13px;
+}
+
+/* Title */
+.subtitle{
+  margin-top:18px;
+  font-size:12px;
+  letter-spacing:4px;
+  opacity:.8;
+}
+
+h1{
+  margin:5px 0;
+  font-family:cursive;
+  font-size:clamp(55px,13vw,95px);
+  background:linear-gradient(
+    90deg,
+    #fff,
+    #ffd700,
+    #ff69b4,
+    #fff
+  );
+  background-size:300%;
+  color:transparent;
+  background-clip:text;
+  -webkit-background-clip:text;
+  animation:shine 3s linear infinite;
+}
+
+@keyframes shine{
+  from{background-position:0}
+  to{background-position:300%}
+}
+
+h2{
+  font-size:25px;
+  color:#ffd5eb;
+  margin-bottom:18px;
+}
+
+/* Typing */
+#message{
+  min-height:150px;
+  font-size:17px;
+  line-height:1.8;
+  color:#fff0f8;
+}
+
+.cursor{
+  display:inline-block;
+  width:2px;
+  height:20px;
+  background:#ff69b4;
+  animation:blink .7s infinite;
+}
+
+@keyframes blink{
+  50%{opacity:0}
+}
+
+/* Buttons */
+button{
+  margin:8px 4px;
+  padding:13px 22px;
+  border:0;
+  border-radius:30px;
+  background:white;
+  color:#d60070;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow:0 8px 25px rgba(0,0,0,.3);
+}
+
+button:active{
+  transform:scale(.95);
+}
+
+#musicStatus{
+  font-size:12px;
+  opacity:.7;
+  margin-top:5px;
+}
+
+/* Balloons */
+.balloon{
+  position:fixed;
+  bottom:-100px;
+  width:45px;
+  height:58px;
+  border-radius:50%;
+  z-index:2;
+  animation:balloon 11s linear infinite;
+}
+
+.balloon:after{
+  content:"";
+  position:absolute;
+  width:1px;
+  height:80px;
+  background:white;
+  left:50%;
+  top:55px;
+  opacity:.5;
+}
+
+.b1{left:5%;background:#ff4081}
+.b2{left:25%;background:#ffd740;animation-delay:3s}
+.b3{left:70%;background:#40c4ff;animation-delay:6s}
+.b4{left:90%;background:#b388ff;animation-delay:1s}
+
+@keyframes balloon{
+  from{
+    transform:translateY(0) rotate(0);
+  }
+  to{
+    transform:translateY(-120vh) rotate(20deg);
+  }
+}
+
+/* Hearts */
+.heart{
+  position:fixed;
+  bottom:-40px;
+  z-index:3;
+  pointer-events:none;
+  animation:heart 7s linear forwards;
+}
+
+@keyframes heart{
+  0%{
+    transform:translateY(0) scale(.5);
+    opacity:0;
+  }
+  20%{
+    opacity:1;
+  }
+  100%{
+    transform:translateY(-110vh) scale(1.3) rotate(25deg);
+    opacity:0;
+  }
+}
+
+/* Fireworks */
+.firework{
+  position:fixed;
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  z-index:4;
+  pointer-events:none;
+}
+
+@keyframes explode{
+  0%{
+    transform:scale(0);
+    opacity:1;
+  }
+
+  100%{
+    transform:scale(1);
+    opacity:0;
+  }
+}
+
+@media(max-width:500px){
+
+  .card{
+    margin:2vh auto;
+    padding:25px 15px;
+  }
+
+  .photo-wrap{
+    width:125px;
+    height:125px;
+  }
+
+  h2{
+    font-size:21px;
+  }
+
+  #message{
+    font-size:15px;
+    min-height:155px;
+  }
+
+  button{
+    font-size:14px;
+    padding:12px 18px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Balloons -->
+<div class="balloon b1"></div>
+<div class="balloon b2"></div>
+<div class="balloon b3"></div>
+<div class="balloon b4"></div>
+
+<div class="card">
+
+  <!-- PHOTO -->
+  <div class="photo-wrap">
+    <img
+      id="photo"
+      alt="Birthday Photo"
+      src="IMG-20260805-WA0014.jpg"
+    >
+  </div>
+
+  <h1>Happy Birthday</h1>
+
+  <!-- CHANGE NAME -->
+  <h2>Gulfi❤️</h2>
+
+  <!-- Typing message -->
+  <div>
+    <span id="message"></span>
+    <span class="cursor"></span>
+  </div>
+
+  <br>
+
+  <!-- MUSIC -->
+  <button id="musicButton">
+    🎵 Play Music
+  </button>
+
+  <div id="musicStatus">
+    Tap the button for birthday music 🎶
+  </div>
+
+</div>
+
+
+<script>
+
+/* =====================================
+   CHANGE THE NAME
+   ===================================== */
+
+const personName = "Gulfi ";
+
+
+/* =====================================
+   BIRTHDAY MESSAGE
+   ===================================== */
+
+const message =
+"Happy Birthday, " + personName + "! ❤️ " +
+"Today is all about celebrating the beautiful person you are. " +
+"May your life always be filled with happiness, love, laughter and unforgettable memories. ✨ " +
+"I hope every dream in your heart comes true. " +
+"Keep smiling, keep shining and never forget how special you are for me. 💕 " +
+"Wishing you the happiest birthday ever! And I love you🎂🥳❤️";
+
+
+/* =====================================
+   TYPING EFFECT
+   ===================================== */
+
+let position = 0;
+
+function typeMessage(){
+
+  if(position < message.length){
+
+    document.getElementById("message").textContent +=
+      message[position];
+
+    position++;
+
+    setTimeout(typeMessage,40);
+  }
+}
+
+typeMessage();
+
+
+/* =====================================
+   PHOTO FROM PHONE
+   ===================================== */
+
+document
+.getElementById("photoInput")
+.addEventListener("change",function(){
+
+  const file = this.files[0];
+
+  if(file){
+
+    const reader = new FileReader();
+
+    reader.onload = function(e){
+
+      document.getElementById("photo").src =
+        e.target.result;
+
+    };
+
+    reader.readAsDataURL(file);
+  }
+
+});
+
+
+/* =====================================
+   BUILT-IN MUSIC
+   ===================================== */
+
+/*
+   This is a tiny built-in melody generated
+   by the phone/browser itself.
+
+   Therefore NO MP3 FILE is required.
+*/
+
+let audioContext;
+let playing = false;
+let musicTimer;
+
+const notes = [
+  261.63, 261.63, 293.66, 261.63,
+  349.23, 329.63,
+  261.63, 261.63, 293.66, 261.63,
+  392.00, 349.23
+];
+
+function playNote(frequency,time){
+
+  const oscillator =
+    audioContext.createOscillator();
+
+  const gain =
+    audioContext.createGain();
+
+  oscillator.type = "sine";
+
+  oscillator.frequency.value =
+    frequency;
+
+  gain.gain.setValueAtTime(
+    0.0001,
+    time
+  );
+
+  gain.gain.exponentialRampToValueAtTime(
+    0.15,
+    time + 0.03
+  );
+
+  gain.gain.exponentialRampToValueAtTime(
+    0.0001,
+    time + 0.35
+  );
+
+  oscillator.connect(gain);
+  gain.connect(audioContext.destination);
+
+  oscillator.start(time);
+  oscillator.stop(time + 0.4);
+}
+
+function playMusic(){
+
+  if(!audioContext){
+
+    audioContext =
+      new (window.AudioContext ||
+      window.webkitAudioContext)();
+
+  }
+
+  if(audioContext.state === "suspended"){
+    audioContext.resume();
+  }
+
+  let start =
+    audioContext.currentTime + 0.1;
+
+  notes.forEach((note,index)=>{
+
+    playNote(
+      note,
+      start + index * 0.42
+    );
+
+  });
+
+  musicTimer =
+    setTimeout(playMusic, notes.length * 420);
+}
+
+
+document
+.getElementById("musicButton")
+.addEventListener("click",function(){
+
+  if(!playing){
+
+    playing = true;
+
+    playMusic();
+
+    this.textContent =
+      "⏸️ Pause Music";
+
+    document.getElementById("musicStatus")
+      .textContent =
+      "🎶 Birthday music is playing ❤️";
+
+  }else{
+
+    playing = false;
+
+    clearTimeout(musicTimer);
+
+    if(audioContext){
+      audioContext.suspend();
+    }
+
+    this.textContent =
+      "🎵 Play Music";
+
+    document.getElementById("musicStatus")
+      .textContent =
+      "Music paused";
+
+  }
+
+});
+
+
+/* =====================================
+   FLOATING HEARTS
+   ===================================== */
+
+function createHeart(){
+
+  const heart =
+    document.createElement("div");
+
+  heart.className = "heart";
+
+  const symbols =
+    ["❤️","💕","💖","💗","💓","✨"];
+
+  heart.textContent =
+    symbols[
+      Math.floor(
+        Math.random()*symbols.length
+      )
+    ];
+
+  heart.style.left =
+    Math.random()*100 + "vw";
+
+  heart.style.fontSize =
+    15 + Math.random()*25 + "px";
+
+  heart.style.animationDuration =
+    5 + Math.random()*5 + "s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(()=>{
+    heart.remove();
+  },10000);
+}
+
+setInterval(createHeart,700);
+
+
+/* =====================================
+   STARS
+   ===================================== */
+
+for(let i=0;i<80;i++){
+
+  const star =
+    document.createElement("div");
+
+  star.className="star";
+
+  star.style.left =
+    Math.random()*100+"vw";
+
+  star.style.top =
+    Math.random()*100+"vh";
+
+  star.style.animationDelay =
+    Math.random()*2+"s";
+
+  document.body.appendChild(star);
+}
+
+
+/* =====================================
+   FIREWORKS
+   ===================================== */
+
+function firework(x,y){
+
+  const f =
+    document.createElement("div");
+
+  f.className="firework";
+
+  f.style.left=x+"px";
+  f.style.top=y+"px";
+
+  const colors=[
+    "#ff1493",
+    "#ffd700",
+    "#00ffff",
+    "#ffffff",
+    "#ff4d6d"
+  ];
+
+  let shadows="";
+
+  for(let i=0;i<16;i++){
+
+    const angle =
+      (Math.PI*2/16)*i;
+
+    const distance =
+      60+Math.random()*60;
+
+    const dx =
+      Math.cos(angle)*distance;
+
+    const dy =
+      Math.sin(angle)*distance;
+
+    shadows +=
+      `${dx}px ${dy}px 0 ${
+        colors[
+          Math.floor(
+            Math.random()*colors.length
+          )
+        ]
+      }${i<15?",":""}`;
+  }
+
+  f.style.boxShadow=shadows;
+
+  f.style.animation=
+    "explode 1.4s ease-out forwards";
+
+  document.body.appendChild(f);
+
+  setTimeout(()=>{
+    f.remove();
+  },1500);
+}
+
+
+/* Automatic fireworks */
+
+setInterval(()=>{
+
+  firework(
+    Math.random()*window.innerWidth,
+    80+Math.random()*
+    (window.innerHeight*0.65)
+  );
+
+},1800);
+
+
+/* Firework when screen is tapped */
+
+document.addEventListener("click",function(e){
+
+  if(
+    e.target.tagName !== "BUTTON" &&
+    e.target.tagName !== "LABEL"
+  ){
+
+    firework(
+      e.clientX,
+      e.clientY
+    );
+
+  }
+
+});
+
+</script>
+
+</body>
+</html>
